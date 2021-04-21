@@ -17,7 +17,7 @@ Pod::Spec.new do |spec|
 
   spec.name         = "MyFramework"
   spec.version      = "0.0.1"
-  spec.summary      = "A short description of MyFramework."
+  spec.summary      = "测试用的"
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -25,9 +25,10 @@ Pod::Spec.new do |spec|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   spec.description  = <<-DESC
+  测试使用
                    DESC
 
-  spec.homepage     = "http://EXAMPLE/MyFramework"
+  spec.homepage     = "https://github.com/lixiangshadow/MyFramework"
   # spec.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -63,8 +64,8 @@ Pod::Spec.new do |spec|
   #  the deployment target. You can optionally include the target after the platform.
   #
 
-  # spec.platform     = :ios
-  # spec.platform     = :ios, "5.0"
+  spec.platform     = :ios
+  spec.platform     = :ios, "9.0"
 
   #  When using multiple platforms
   # spec.ios.deployment_target = "5.0"
@@ -79,7 +80,7 @@ Pod::Spec.new do |spec|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  spec.source       = { :git => "http://EXAMPLE/MyFramework.git", :tag => "#{spec.version}" }
+  spec.source       = { :git => "https://github.com/lixiangshadow/MyFramework.git", :tag => "#{spec.version}" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -116,8 +117,8 @@ Pod::Spec.new do |spec|
   #  the lib prefix of their name.
   #
 
-  # spec.framework  = "SomeFramework"
-  # spec.frameworks = "SomeFramework", "AnotherFramework"
+  spec.framework  = "MyFramework.framework"
+  spec.frameworks = "Foundation", "UIKit", "CoreLocation"
 
   # spec.library   = "iconv"
   # spec.libraries = "iconv", "xml2"
@@ -129,9 +130,17 @@ Pod::Spec.new do |spec|
   #  where they will only apply to your library. If you depend on other Podspecs
   #  you can include multiple dependencies to ensure it works.
 
-  # spec.requires_arc = true
+  spec.requires_arc = true
 
   # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-  # spec.dependency "JSONKit", "~> 1.4"
-
+  spec.dependency "AFNetworking"
+  spec.dependency "MJRefresh"
+  spec.dependency "ReactiveObjC"
+  spec.dependency "AMapNavi-NO-IDFA"
+  spec.dependency "AMapLocation-NO-IDFA"
+  spec.dependency "AMapSearch-NO-IDFA"
+  spec.dependency "BaiduMapKit"
+  spec.dependency "BMKLocationKit"
+  spec.dependency "GoogleMaps"
+  spec.dependency "GooglePlaces"
 end
